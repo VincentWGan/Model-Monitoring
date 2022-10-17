@@ -1,0 +1,313 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{ieee1983ieee}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=37609dd03273fd54aa620b5289e34589}{%
+           family={Committee},
+           familyi={C\bibinitperiod},
+           given={IEEE\bibnamedelimb Computer\bibnamedelimb Society.\bibnamedelimi Software\bibnamedelimb Engineering\bibnamedelima Technical},
+           giveni={I\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{37609dd03273fd54aa620b5289e34589}
+      \strng{fullhash}{37609dd03273fd54aa620b5289e34589}
+      \strng{bibnamehash}{37609dd03273fd54aa620b5289e34589}
+      \strng{authorbibnamehash}{37609dd03273fd54aa620b5289e34589}
+      \strng{authornamehash}{37609dd03273fd54aa620b5289e34589}
+      \strng{authorfullhash}{37609dd03273fd54aa620b5289e34589}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{1983}
+      \field{title}{IEEE Standard Glossary of Software Engineering Terminology}
+      \field{volume}{729}
+      \field{year}{1983}
+    \endentry
+    \entry{czakon_2022}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e18af8e457912e23ab4798658aba275e}{%
+           family={Czakon},
+           familyi={C\bibinitperiod},
+           given={Jakub},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e18af8e457912e23ab4798658aba275e}
+      \strng{fullhash}{e18af8e457912e23ab4798658aba275e}
+      \strng{bibnamehash}{e18af8e457912e23ab4798658aba275e}
+      \strng{authorbibnamehash}{e18af8e457912e23ab4798658aba275e}
+      \strng{authornamehash}{e18af8e457912e23ab4798658aba275e}
+      \strng{authorfullhash}{e18af8e457912e23ab4798658aba275e}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{neptune.ai}
+      \field{title}{Best tools to do ML model monitoring}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://neptune.ai/blog/ml-model-monitoring-best-tools
+      \endverb
+      \verb{url}
+      \verb https://neptune.ai/blog/ml-model-monitoring-best-tools
+      \endverb
+    \endentry
+    \entry{flaml}{misc}{}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labeldatesource}{nodate}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{FLAML}
+      \field{title}{Getting started}
+      \verb{urlraw}
+      \verb https://microsoft.github.io/FLAML/docs/Getting-Started/
+      \endverb
+      \verb{url}
+      \verb https://microsoft.github.io/FLAML/docs/Getting-Started/
+      \endverb
+    \endentry
+    \entry{tensorflow}{misc}{}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labeldatesource}{nodate}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{TensorFlow}
+      \field{title}{Introduction to tensorflow}
+      \verb{urlraw}
+      \verb https://www.tensorflow.org/learn
+      \endverb
+      \verb{url}
+      \verb https://www.tensorflow.org/learn
+      \endverb
+    \endentry
+    \entry{machin2013statistics}{book}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=bbccb4fe4d4594ea21f815dab85188ac}{%
+           family={Machin},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d2ed9120adf1185b805121ca148453e8}{%
+           family={Bryant},
+           familyi={B\bibinitperiod},
+           given={Trevor},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e0825e042b76afe69405a2c7650ef113}{%
+           family={Altman},
+           familyi={A\bibinitperiod},
+           given={Douglas},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3124882705abf7cca548c58eb9240b39}{%
+           family={Gardner},
+           familyi={G\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{d3b4d114016ab0508ba964488745f4a5}
+      \strng{fullhash}{06c15618d5a051e5d541781c40d99e8f}
+      \strng{bibnamehash}{d3b4d114016ab0508ba964488745f4a5}
+      \strng{authorbibnamehash}{d3b4d114016ab0508ba964488745f4a5}
+      \strng{authornamehash}{d3b4d114016ab0508ba964488745f4a5}
+      \strng{authorfullhash}{06c15618d5a051e5d541781c40d99e8f}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Statistics with confidence: confidence intervals and statistical guidelines}
+      \field{year}{2013}
+    \endentry
+    \entry{mishra_2019}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=958950c88662775a81b93c2049e730a4}{%
+           family={Mishra},
+           familyi={M\bibinitperiod},
+           given={Abhishek},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley &amp; Sons}%
+      }
+      \strng{namehash}{958950c88662775a81b93c2049e730a4}
+      \strng{fullhash}{958950c88662775a81b93c2049e730a4}
+      \strng{bibnamehash}{958950c88662775a81b93c2049e730a4}
+      \strng{authorbibnamehash}{958950c88662775a81b93c2049e730a4}
+      \strng{authornamehash}{958950c88662775a81b93c2049e730a4}
+      \strng{authorfullhash}{958950c88662775a81b93c2049e730a4}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Amazon}
+      \field{title}{Machine learning in the AWS cloud: Add intelligence to applications with Amazon Sagemaker and Amazon Rekognition}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://aws.amazon.com/sagemaker/
+      \endverb
+      \verb{url}
+      \verb https://aws.amazon.com/sagemaker/
+      \endverb
+    \endentry
+    \entry{7796926}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=a4728d9fd310eeb86da643f2aaff44ca}{%
+           family={{Patki}},
+           familyi={P\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ef1f19df45b6ccbaddbd813fa9d5ff2a}{%
+           family={{Wedge}},
+           familyi={W\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9b0127ccb5e318c8fedd3fdb21942ebe}{%
+           family={{Veeramachaneni}},
+           familyi={V\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{49af97b9342de5d13324708f37193105}
+      \strng{fullhash}{49af97b9342de5d13324708f37193105}
+      \strng{bibnamehash}{49af97b9342de5d13324708f37193105}
+      \strng{authorbibnamehash}{49af97b9342de5d13324708f37193105}
+      \strng{authornamehash}{49af97b9342de5d13324708f37193105}
+      \strng{authorfullhash}{49af97b9342de5d13324708f37193105}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2016 IEEE International Conference on Data Science and Advanced Analytics (DSAA)}
+      \field{month}{10}
+      \field{title}{The Synthetic Data Vault}
+      \field{year}{2016}
+      \field{pages}{399\bibrangedash 410}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1109/DSAA.2016.49
+      \endverb
+      \keyw{data analysis;relational databases;synthetic data vault;SDV;generative model;relational database;multivariate modelling;predictive model;data analysis;data science;Data models;Databases;Computational modeling;Predictive models;Hidden Markov models;Numerical models;Synthetic data generation;crowd sourcing;data science;predictive modeling}
+    \endentry
+    \entry{SCHRODER2022}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=4b27f0a382dd7d76243baa5baa7a1218}{%
+           family={Schröder},
+           familyi={S\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c51914f1cbb699e35ec6df3a0c76b741}{%
+           family={Schulz},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1de1fd0366074b746ab28c52a2908416}
+      \strng{fullhash}{1de1fd0366074b746ab28c52a2908416}
+      \strng{bibnamehash}{1de1fd0366074b746ab28c52a2908416}
+      \strng{authorbibnamehash}{1de1fd0366074b746ab28c52a2908416}
+      \strng{authornamehash}{1de1fd0366074b746ab28c52a2908416}
+      \strng{authorfullhash}{1de1fd0366074b746ab28c52a2908416}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The importance of software based on machine learning is growing rapidly, but the potential of prototypes may not be realized in operation. This study identified six categories of challenges for verification and validation of machine learning applications during production. Subsequently, monitoring was analyzed as a possible solution to mitigate those challenges. Capturing relevant data and model metrics may reveal problems at an early stage, allowing for targeted countermeasures. This study presents a taxonomy of methods and metrics currently addressed in scientific literature and compares these categories with case studies from practice.}
+      \field{issn}{2666-7649}
+      \field{journaltitle}{Data Science and Management}
+      \field{title}{Monitoring machine learning models: A categorization of challenges and methods}
+      \field{year}{2022}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.dsm.2022.07.004
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S2666764922000303
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S2666764922000303
+      \endverb
+      \keyw{Machine learning,Monitoring,Operations,Taxonomy}
+    \endentry
+    \entry{Vartak2018MODELDBOA}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=1c58e0468f0c29de2eea8af0b3d2e1f4}{%
+           family={Vartak},
+           familyi={V\bibinitperiod},
+           given={Manasi},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8b530348ffa5a0cfb0b9827772f501e9}{%
+           family={Madden},
+           familyi={M\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e00d3205502eb80966a9a256a8cd6a77}
+      \strng{fullhash}{e00d3205502eb80966a9a256a8cd6a77}
+      \strng{bibnamehash}{e00d3205502eb80966a9a256a8cd6a77}
+      \strng{authorbibnamehash}{e00d3205502eb80966a9a256a8cd6a77}
+      \strng{authornamehash}{e00d3205502eb80966a9a256a8cd6a77}
+      \strng{authorfullhash}{e00d3205502eb80966a9a256a8cd6a77}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Data Eng. Bull.}
+      \field{title}{MODELDB: Opportunities and Challenges in Managing Machine Learning Models}
+      \field{volume}{41}
+      \field{year}{2018}
+      \field{pages}{16\bibrangedash 25}
+      \range{pages}{10}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,17 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'template.blg'
+[60] biber-darwin:340> INFO - === Mon Oct 17, 2022, 14:10:36
+[73] Biber.pm:418> INFO - Reading 'template.bcf'
+[154] Biber.pm:972> INFO - Found 9 citekeys in bib section 0
+[166] Biber.pm:4383> INFO - Processing section 0
+[175] Biber.pm:4574> INFO - Looking for bibtex file 'sample.bib' for section 0
+[176] bibtex.pm:1713> INFO - LaTeX decoding ...
+[186] bibtex.pm:1518> INFO - Found BibTeX data source 'sample.bib'
+[241] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[241] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[241] Biber.pm:4203> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[241] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[252] bbl.pm:654> INFO - Writing 'template.bbl' with encoding 'UTF-8'
+[256] bbl.pm:757> INFO - Output to template.bbl
+[256] Biber.pm:130> WARN - legacy month field 'Oct' in entry '7796926' is not an integer - this will probably not sort properly.
+[256] Biber.pm:132> INFO - WARNINGS: 1

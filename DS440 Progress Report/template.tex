@@ -1,0 +1,171 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University/School Laboratory Report
+% LaTeX Template
+% Version 4.0 (March 21, 2022)
+%
+% This template originates from:
+% https://www.LaTeXTemplates.com
+%
+% Authors:
+% Vel (vel@latextemplates.com)
+% Linux and Unix Users Group at Virginia Tech Wiki
+%
+% License:
+% CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+	letterpaper, % Paper size, specify a4paper (A4) or letterpaper (US letter)
+	12pt, % Default font size, specify 10pt, 11pt or 12pt
+]{CSUniSchoolLabReport}
+
+\addbibresource{sample.bib} % Bibliography file (located in the same folder as the template)
+%----------------------------------------------------------------------------------------
+%	REPORT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{Monitoring Machine Learning Models \\ DS440 Fall 2022 \\ Section 002 Group 6 \\ Progress Report 3} % Report title
+
+\author{Vincent Gan(wxg39@psu.edu) \\ Glenn Hubbard(gch5121@psu.edu) \\ Dequan Ma(djm7012@psu.edu) \\ Yuming Sun(yfs5150@psu.edu)} % Author name(s), add additional authors like: '\& James \textsc{Smith}'
+
+\date{October 9, 2022} % Date of the report
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert the title, author and date using the information specified above
+
+
+% If you need to include an abstract, uncomment the lines below
+%\begin{abstract}
+%	Abstract text
+%\end{abstract}
+
+%----------------------------------------------------------------------------------------
+%	Team Members
+%----------------------------------------------------------------------------------------
+
+\section{Team Members}
+\indent Vincent Gan is a senior with a major in Computational Data Sciences and a minor in statistics. He is familiar with programming languages, including Python, C++, R, SQL, and Scala. Regarding machine learning, he is skillful in data preprocessing, hyper-parameter tuning, and algorithm/model evaluation.\par
+Glenn Hubbard is a senior in Applied Data Sciences. He has programming experience in Python and Java. He is interested in the ethical implications of artificial intelligence and the prolific use of machine learning. Glenn’s expertise rests mostly in technical writing, algorithm development, and front-end design. Glenn is a senior in Applied Data Sciences. \par
+Dequan Ma is a senior with a major in Computational Data Sciences and a minor in mathematics. He has programming experience in Python, R, and SQL. He is interested in transforming real-world problems into machine learning problems and exploratory data analysis.\par
+Yuming Sun is a senior in Statistical Modeling Data Sciences. Most of his work is in Python. He is interested in physics informed networks, unsupervised anomaly detection algorithms and practical application of the algorithm of machine learning. He also has experience in basic techniques for building intelligent computer systems.
+
+ 
+%----------------------------------------------------------------------------------------
+%	Topic Introduction
+%----------------------------------------------------------------------------------------
+
+\section{Topic Introduction}
+Model monitoring is the practice of measuring model performance. As a field, model monitoring is broadly defined. \textbf{A model monitoring system can monitor features including but not limited to predictive correctness, hardware usage, the integrity of input data, and data drifts}. Monitoring these features allows model users to \textbf{spot model malfunctions as early as possible and prevent loss}. \par
+
+The team will craft a model monitoring system that can inform users of key metrics related to their trained model and input data. \textbf{It is assumed that users will perform necessary measures specific to their scenarios to provide a satisfactory baseline model before monitoring}. From this, the team hope to learn the viability of model monitoring in everyday machine learning tasks, and will apply this knowledge to compare the built monitoring system against existing open source systems.
+
+%----------------------------------------------------------------------------------------
+%	Existing Efforts
+%----------------------------------------------------------------------------------------
+
+\section{Existing Efforts}
+\subsection{Why Monitor Models}
+As gathered from a paper on managing machine learning models \autocite{Vartak2018MODELDBOA}, model monitoring is a tool that helps improve performance, reliability, and accountability when implementing a machine learning model. Model monitoring remains present in all stages of the data science pipeline–from data intake, to model training, and to parameter tuning. Advanced monitoring systems can be deployed as a standalone system that operates with a live model–leading to an automatic change/alert system of events within the model. For instance, if new data being fed into the model included null values, then the monitoring system could flag that data. If a shift in the data values–also known as a data drift–were to occur drastically enough, it would lead to limited reliability from the predicted result, then the monitoring system could flag this. Monitoring can clearly serve a purpose in the day-to-day operations of firms looking to maintain a solid up-time and reliable services. \par
+
+Monitoring also plays a role in preventing malfeasance. An advanced cyber threat, known as an adversarial attack, can manipulate the input into a machine learning model, hoping to alter the predicted result. In advanced settings, such as autonomous vehicles, this threat poses a clear and present danger–a danger that could lead to loss of life and property damage. However, advanced monitoring systems may detect these types of cyber attacks, and thus work to correct the prediction–or at the very least, alert the relevant authorities. \par
+
+The team is interested in developing our knowledge and skill set surrounding model monitoring because of the growing presence of these tools in the workplace and in government. Machine Learning Operations, otherwise known as MLOPS, is a growing practice in firms with vast model deployment. MLOPS describes the field of work individuals who labor on model monitoring problems. MLOPS jobs are abundant–with varying degrees of opportunity in a variety of industries. Despite the opportunity for career growth, model monitoring offers exploration–new technologies will be needed to ensure machine learning models can stay relevant–and the best way to ensure this is to continue to improve the reliability of older models.
+
+\subsection{Challenges}
+\autocite{SCHRODER2022} points out that monitoring machine learning models comes with many challenges. Before we dive into various metrics of monitoring model performance, the quality of data input needs to be assessed. It is crucial to monitor the quality, format, and distribution of data continuously while operating an MLM.
+
+Then, model performance can be measured by several metrics, including performance, robustness, confidence, economy, and more. Performance is usually measured by predictive correctness metrics, such as accuracy, precision, recall, roc-curves, and more. Robustness is defined as the degree to which a component continues to function correctly in the presence of invalid inputs or challenging environmental conditions \autocite{ieee1983ieee}. Confidence describes the probability with which a model believes its given prediction is correct \autocite{machin2013statistics}. The economy of a model relates to the economic consequences of deploying a model. 
+
+\subsection{Current Monitoring Systems}
+Building a monitoring system from scratch is not always possible and workable. Fortunately, there are many monitoring services available on the market. Major businesses usually consider services from Arize, Amazon SageMaker, Censius, and more \autocite{czakon_2022}. Among them, Amazon SageMaker seems to be the most prominent. Amazon SageMaker is a fully inclusive MLOPS system, and includes the ability to “build, train, and deploy machine learning (ML) for any use case with fully managed infrastructure, tools, and workflows” \autocite{mishra_2019}. Despite these broad abilities, SageMaker’s monitoring component offers continuous model management that can track bias and drift within the data. Amazon takes model monitoring even further and even offers the ability to re-train the model once the bias and drift are found. Because of SageMaker’s integration within Amazon Web Services and its broad viability, this product is widely used across industry. \par
+While developing a system comparable to Amazon's SageMaker is improbable within one semester, the team believes that some model monitoring projects on GitHub serve as a solid starting point and will provide guidance. One of these guiding projects will be Evidently \autocite{czakon_2022}. Evidently offers a direct library that can be used within a Jupyter notebook to monitor models. 
+
+\subsection{Useful Libraries}
+Since the project is mostly concerned about the post-training model monitoring stages, the team will use existing libraries to minimize the time spent on training models. FLAML (A fast library for AutoML) is a helpful Python library to facilitate the process \autocite{flaml}. It automates finding the best fitting models for various machine learning tasks, including classification, Natural Language Processing, Rank, regression, Time Series Forecasting, and many more. With this library, the team can create different models to develop and thoroughly assess the model monitoring system. If time permits, the team would also like to enable our model monitoring system to monitor neural networks, which can be trained with the TensorFlow library \autocite{tensorflow}. \par
+
+In order to test the monitoring system, a continuous stream of testing data of different types is required. In addition, it is necessary to make sure that the testing data follows a similar distribution with minor shifts, so that the team can observe how well our system can monitor those shifts. There is a Python library called SDV (Synthetic Data Vault) that solves this problem \autocite{7796926}. This library allows users to generate tabular data that has similar statistical properties as the training data easily.  
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	Proposed Work
+%----------------------------------------------------------------------------------------
+
+\section{Proposed Work}
+\subsection{Deliverables}
+The team would like to explore the creation of \textbf{a model monitoring system that can provide insights on performing most machine learning models and the data stream flowing into the models}. The team tentatively decided that the system will be delivered as a one-file python library and there will be a sample Jupyter notebook provided for each use case. 
+
+\subsection{Roles}
+Vincent will serve as the model developer, which is based on his expertise in tuning, evaluation, and data processing. Glenn will serve as a model tester, which is based on his knowledge of algorithm development and front-end design. Dequan will serve as a visualization engineer, which will provide a user-friendly way to view the monitoring environment. Yuming’s deep knowledge of machine learning will help him serve as a technical writer, since he can succinctly convey advanced concepts into words. While these roles will get the most value out of each individual, they are not set in stone. The team will work together on most problems. If help is needed in one area, the team will translate their labor into that field.
+\begin{comment}
+\subsection{Initial Approach}
+We decided that our first phase would be dedicated to model training, which has been completed on September 23rd. With the goal of monitoring most models with our system, each of us set out to train at least one type of model with an appropriate dataset. We hoped to gain some inspiration and motivation for model monitoring while training the models. \par 
+
+Vincent worked on a time series forecasting model with the AAPL stock price data found on Kaggle \autocite{mooney_2022}. The primary features of the dataset are the dates and their associated closing prices from 1980 to 2022. Besides the primary features, there are several other features that may affect the closing prices. Vincent initially followed FLAML’s multivariate time series forecasting routine, but the result model had subpar performance. Then, he switched to the univariate time series forecasting routine and achieved a much better result model. During the training process, he realized that preprocessing is fundamental and specific to a dataset. Therefore, a model monitoring system requires its users to provide as many details as possible on their application. \par
+
+Glenn worked on training an image classification model with TensorFlow’s Keras library. Currently, Glenn has the model working, but is determining a way to efficiently train the model. Because of physical computing constraints, he believes that the best route will be to lower the number of epochs in the model. While accuracy will be lower, the ability to monitor accuracy still applies. Since the project is based on monitoring accuracy, rather than simply attempting to provide the best accuracy, he will simply try to monitor changes in the accuracy, despite its lower value. This will help reduce the training time and allow him to dive right into the depths of model monitoring. The dataset he will begin with is the CIFAR-10 dataset \autocite{cifar-100}. This dataset involves the classification of ten different objects and has 6000 images per class. This leads to 60,000 images, which is quite extensive. Time permitting, Glenn will attempt to use the Mendeley Weather Classification Dataset \autocite{ajayi_2018}, however this will be a secondary goal, and will not be necessary to prove success in monitoring. \par
+
+Dequan worked on training a binary classification model. He used a bank churn dataset from Kaggle \autocite{syviaw_2021}. The task was to classify whether a client would “churn” from the features. He initially used Sklearn’s RandomForest, Adaboost, and Support Vector Machine models and achieved decent results. Finally, he used FLAML to find an even better fitted model. During the training, he realized it is crucial to monitor the composition of a feature continuously to prevent model decay. \par
+
+Yuming worked on creating a regression model. Similarly, he will also monitor the “accuracy” of the regression. The dataset he used was the City of Baltimore Crime Data \autocite{data.world_2016}. The task was to predict the crime time with other features. He also chose FLAML to be his primary library for model training. During the training, he realized that for regression models, we can’t simply use accuracy as an evaluation metric to evaluate the model’s performance since the accuracy of the train, validation, and test sets will always be zero when accuracy is used as a regression model evaluation metric. Therefore, it is not appropriate to use accuracy as a metric for evaluating a regression model. To determine an evaluation metric for a regression model, Yuming will use the Loss functions, which are L1 and L2 functions, to evaluate the accuracy of the regression model.
+\end{comment}
+
+\subsection{Milestones}
+\subsubsection{Model Training}
+
+The first milestone is model training with a due date of September 23rd. Each member of the team will work on at least one type of model. This milestone gains insights on requirements of monitoring different types of models, since each type of model will have different input data format and different evaluation metrics.
+
+\subsubsection{Model Performance Plotting}
+
+The second milestone is model performance plotting with a tentative due date of October 13th. The team members will continue to work with the trained models and training data from the previous milestone. They will write functions to visualize the performance of our models with appropriate evaluation metrics. 
+
+\subsubsection{Data Plotting}
+
+The third milestone is data plotting with a tentative due date of November 1st. Now that there are functions to visualize model performance, the team will then visualize essential statistical properties of the input data, which will help users prevent or troubleshoot model performance declines. 
+
+\subsubsection{Comparing with Existing Libraries}
+
+The final milestone is comparing with existing libraries with a tentative due date of November 10th. The team will seek open-source libraries that share similar functionalities and compare the outputs to see how well the system works and how it can be improved.
+
+\subsubsection{Optional: Build A Complete Python Library}
+
+An optional milestone will be to compile the Python file into a Python library. Then, it will be published online and hopefully be continually improved with the help of the online community.
+
+%----------------------------------------------------------------------------------------
+%	Implementation
+%----------------------------------------------------------------------------------------
+
+\section{Implementation}
+\subsection{Model Training}
+For this milestone, the team members each built a type of machine learning model and gained some insights on essential functionalities of a model monitoring system. Currently, the investigated models include time series forecasting, classification, regression, and image classification. The team mainly used FLAML and TensorFlow to train the models and achieved satisfactory performance, thanks to extensive use case demonstrations on respective documentations. Then, each of the team members saved their model to a file for future testing. \par
+
+In addition, the insights from each member’s model training experience helped the team with setting concrete plans for developing the model monitoring system. First, preprocessing is fundamental and specific to a type of dataset, because every dataset will a have different format and require different preprocessing strategies. Therefore, it is necessary to have separate plotting functions for different machine learning tasks. Also, the team realized that the focus of the project is not to train a perfect model. Rather, the focus should be to monitor how the model performance changes as the input data changes in its statistical properties, such as the distribution and joint distribution of individual features in a dataset. For model performance, it is necessary to use different sets of evaluation metrics. For example, the definition of accuracy would be different between a classification and a regression model. The former would mean the number of correct predictions out of all predictions, while the latter would typically mean the mean error between true values and predicted values. 
+\subsection{Model Performance Plotting}
+With the insights from the previous milestone, the team figured out a clear road map from now on. Each of the team members will write functions to visualize model performance with various evaluation metrics. To calculate the scores from different metrics, the team will use Scikit-Learn libraries, such as mean square error, r squared, accuracy, precision, and confusion matrix. To visualize the scores, the team will use Matplotlib’s Pyplot and Animation libraries with Jupyter notebook’s widget mode. This configuration allows the functions to generate real-time interactive plots, as inspired by Amazon’s SageMaker. \par
+
+While the outputs of the functions will depend on a specific model, the workflow of the functions will be roughly the same. For example, the plotting function for a time series model will take in predicted values, true values, batch size, and a list of metrics. The predicted and true values can be arrays of label values. The batch size parameter allows users to define the number of data points in one evaluation.
+
+The list of metrics allows users to define a list of one or more supported metrics. Each metric will output one subplot. Currently, the supported metrics include mean squared error, r squared, and mean absolute percentage error. If the batch size is set to one, then the function will evaluate defined metrics and update the plots for one data point at a time; if it is set to the length of the predicted values, then the function will evaluate defined metrics for the entire dataset. \par
+
+In order to test the plotting functions, it is necessary to prepare a pool of test data for each with controlled statistical properties. One idea is to reserve more test data from original datasets and perform upsampling when necessary. This idea is a good starting point, but the team would still need to find more data to test the functions thoroughly. Ideally, the team would like to write a data simulation function from scratch that fits a dataset to its closest distribution, performs a controlled distribution shift, and resamples from the shifted distribution. Such a simulation function would allow the team to have as many data as necessary for testing. However, the related statistical calculations and resampling procedures are currently beyond the team’s capabilities. \par
+
+Fortunately, the team found an alternative solution. There are many Python libraries that allow users to generate synthetic data that emulates the statistical properties of a given dataset. Among them, the team finds the library SDV, as mentioned in section 3.4, the most suitable for existing models. SDV aims to generate synthetic data that looks close to original data, but not perfectly. As a result, the generated data will come with minor distribution shifts. Then, the team can observe the effectiveness of the functions in responding to those shifts. \par
+Most of the progress for this milestone so far has been conceptual. The team is currently working to turn the concepts into codes. The latest codes can be found \href{https://github.com/VincentWGan/Model-Monitoring}{here}. 
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+\clearpage
+\printbibliography % Output the bibliography
+%----------------------------------------------------------------------------------------
+
+\end{document}

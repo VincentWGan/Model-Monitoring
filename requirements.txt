@@ -7,3 +7,5 @@ scikit_learn
 scipy
 sdv
 streamlit
+hcrystalball
+statsmodels

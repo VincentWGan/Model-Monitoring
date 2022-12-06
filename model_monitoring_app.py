@@ -63,7 +63,9 @@ with st.sidebar:
     batch_size = st.number_input(
         "Enter the batch size of data to evaluate at each iteration", min_value=2)
 
-    start_button = st.button('Start')
+    bt1, bt2 = st.columns(2)
+    start_button = bt1.button('Start')
+    stop_button = bt2.button('Stop')
 
 # creating a single-element container
 placeholder = st.empty()
@@ -88,6 +90,12 @@ if start_button:
         ks_alert = {f: '' for f in drift_detect_features}
         num_dist_drifts = 0
         while True:
+            if stop_button:
+                del df_acu
+                del df_ks_test
+                del acu_alert
+                del ks_alert
+                break
             # df_all = pd.concat([df_all, df_test]).reset_index().iloc[:, 1:]
             y_test = df_test[target_feature]
             x_test = df_test.drop(columns=[target_feature])
@@ -168,6 +176,12 @@ if start_button:
         ks_alert = {f: '' for f in drift_detect_features}
         num_dist_drifts = 0
         while True:
+            if stop_button:
+                del df_mape
+                del df_ks_test
+                del mape_alert
+                del ks_alert
+                break
             # df_all = pd.concat([df_all, df_test]).reset_index().iloc[:, 1:]
             y_test = df_test[target_feature]
             x_test = df_test.drop(columns=[target_feature])
@@ -248,6 +262,12 @@ if start_button:
         ks_alert = {f: '' for f in drift_detect_features}
         num_dist_drifts = 0
         while True:
+            if stop_button:
+                del df_mape
+                del df_ks_test
+                del mape_alert
+                del ks_alert
+                break
             # df_all = pd.concat([df_all, df_test]).reset_index().iloc[:, 1:]
             y_test = df_test[target_feature]
             x_test = df_test.drop(columns=[target_feature])
@@ -322,6 +342,9 @@ if start_button:
         df_metrics = pd.DataFrame(columns=[
                                   'percentage_valid', 'percentage_invalid', 'percentage_weak', 'percentage_wrong'])
         while True:
+            if stop_button:
+                del df_metrics
+                break
             batch_metrics = im.imageDataStream(df_path, batch_size)
             df_metrics = pd.concat(
                 [df_metrics, batch_metrics]).reset_index().iloc[:, 1:]

@@ -11,3 +11,4 @@ sdv
 streamlit
 hcrystalball
 statsmodels
+tensorflow

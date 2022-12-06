@@ -2,10 +2,10 @@ FLAML
 joblib
 keras
 numpy
-opencv_python
+opencv-python
 pandas
 plotly
-scikit_learn
+scikit-learn
 scipy
 sdv
 streamlit

@@ -74,9 +74,9 @@ if start_button:
         df_test = deepcopy(df_og)
         model = joblib.load(model_path)
         # create a dataframe for all tested data
-        df_all = pd.DataFrame(columns=df_test.columns)
+        # df_all = pd.DataFrame(columns=df_test.columns)
         # create a dataframe for all y_pred and y_test
-        df_pred_test = pd.DataFrame(columns=['y_pred', 'y_test'])
+        # df_pred_test = pd.DataFrame(columns=['y_pred', 'y_test'])
         len_of_batches = 0
 
     if model_filter == 'Classification':
@@ -88,14 +88,15 @@ if start_button:
         ks_alert = {f: '' for f in drift_detect_features}
         num_dist_drifts = 0
         while True:
-            df_all = pd.concat([df_all, df_test]).reset_index().iloc[:, 1:]
+            # df_all = pd.concat([df_all, df_test]).reset_index().iloc[:, 1:]
             y_test = df_test[target_feature]
             x_test = df_test.drop(columns=[target_feature])
             y_pred = model.predict(x_test)
+            
             df_pred_test_batch = pd.DataFrame(
                 {'y_pred': y_pred, 'y_test': y_test})
-            df_pred_test = pd.concat(
-                [df_pred_test, df_pred_test_batch]).reset_index().iloc[:, 1:]
+            # df_pred_test = pd.concat(
+            #     [df_pred_test, df_pred_test_batch]).reset_index().iloc[:, 1:]
             batch_size = min(batch_size, len(df_test))
             num_of_batch = ceil(len(df_test) / batch_size)
             acu_scores = np.array([])
@@ -167,14 +168,14 @@ if start_button:
         ks_alert = {f: '' for f in drift_detect_features}
         num_dist_drifts = 0
         while True:
-            df_all = pd.concat([df_all, df_test]).reset_index().iloc[:, 1:]
+            # df_all = pd.concat([df_all, df_test]).reset_index().iloc[:, 1:]
             y_test = df_test[target_feature]
             x_test = df_test.drop(columns=[target_feature])
             y_pred = model.predict(x_test)
             df_pred_test_batch = pd.DataFrame(
                 {'y_pred': y_pred, 'y_test': y_test})
-            df_pred_test = pd.concat(
-                [df_pred_test, df_pred_test_batch]).reset_index().iloc[:, 1:]
+            # df_pred_test = pd.concat(
+            #     [df_pred_test, df_pred_test_batch]).reset_index().iloc[:, 1:]
             batch_size = min(batch_size, len(df_test))
             num_of_batch = ceil(len(df_test) / batch_size)
             mape_scores = np.array([])
@@ -247,14 +248,14 @@ if start_button:
         ks_alert = {f: '' for f in drift_detect_features}
         num_dist_drifts = 0
         while True:
-            df_all = pd.concat([df_all, df_test]).reset_index().iloc[:, 1:]
+            # df_all = pd.concat([df_all, df_test]).reset_index().iloc[:, 1:]
             y_test = df_test[target_feature]
             x_test = df_test.drop(columns=[target_feature])
             y_pred = model.predict(x_test)
             df_pred_test_batch = pd.DataFrame(
                 {'y_pred': y_pred, 'y_test': y_test})
-            df_pred_test = pd.concat(
-                [df_pred_test, df_pred_test_batch]).reset_index().iloc[:, 1:]
+            # df_pred_test = pd.concat(
+            #     [df_pred_test, df_pred_test_batch]).reset_index().iloc[:, 1:]
             num_of_batch = ceil(len(df_test) / batch_size)
             mape_scores = np.array([])
             pred_test_batches = np.array_split(

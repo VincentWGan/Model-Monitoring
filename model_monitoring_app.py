@@ -13,9 +13,6 @@ from copy import deepcopy
 from math import ceil
 from sklearn.metrics import accuracy_score as acu
 from scipy.stats import ks_2samp
-import tensorflow
-import hcrystalball
-import statsmodels
 
 
 st.set_page_config(
@@ -34,7 +31,7 @@ with st.sidebar:
         model_path = st.text_input(
             'Relative path of model', 'Classification_demo/Classification.sav')
         acu_alert_thres = st.number_input(
-            "Enter the accuracy threshold below which alert will be triggered", min_value=0, max_value=1)
+            "Enter the accuracy threshold below which alert will be triggered")
 
     if model_filter == 'Regression':
         df_path = st.text_input(
@@ -42,7 +39,7 @@ with st.sidebar:
         model_path = st.text_input(
             'Relative path of model', 'Regression_demo/regression.sav')
         mape_alert_thres = st.number_input(
-            "Enter the MAPE threshold above which alert will be triggered", min_value=0, max_value=1)
+            "Enter the MAPE threshold above which alert will be triggered")
 
     if model_filter == 'Time Series Forecasting':
         df_path = st.text_input(
@@ -50,7 +47,7 @@ with st.sidebar:
         model_path = st.text_input(
             'Relative path of model', 'Multivar_TS_demo/multi_ts_forcast.sav')
         mape_alert_thres = st.number_input(
-            "Enter the MAPE threshold above which alert will be triggered", min_value=0, max_value=1)
+            "Enter the MAPE threshold above which alert will be triggered")
 
     if model_filter == 'Image Classification':
         df_path = st.text_input(

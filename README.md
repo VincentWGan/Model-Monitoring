@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 Some computer vision packages are also required for the image classification demo. They are specified in "packages.txt". 
 
-Finally, to run, set your current directory to Model-Monitoring/ in the command line, then:
+Finally, to run, set your current directory to "Model-Monitoring/" in the command line, then:
 
 ```bash
 streamlit run model_monitoring_app.py
